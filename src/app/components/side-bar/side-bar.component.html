@@ -1,0 +1,44 @@
+
+<div data-component="sidebar" [class.expanded]="isSidebarExpanded" (mouseenter)="isSidebarExpanded = true" (mouseleave)="isSidebarExpanded = false">
+    <div class="sidebar" >
+        <div class="list-group flex-column first-menu" style="display: flex;gap: 1.5em;">
+            <div>
+                <div class="d-inline">
+                    <div class="profile-media b-r-5" [class.logoheader]="isSidebarExpanded" style="width: 5em;border-radius: 100%;">
+                        <img class="img-fluid" src="../../assets/logo.png" alt="User profile picture">
+                    </div>
+                    <div class="row">
+                        <div class="header-tag pl-3 py-2">
+                            <span class="ml-2" style="font-size: 1.2em;font-weight: 800;">Expense Tracker</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="list-group-item">
+                <i class="fa fa-home" style="color: darkorange;" aria-hidden="true"> <span class="ml-2 align-middle">Home</span></i>
+            </div>
+
+            <div class="list-group-item">
+                <i class="fa fa-inr" aria-hidden="true" style="color: darkorange;"><span
+                            class="ml-2 align-middle">Daily Analysis</span></i>
+            </div>
+            <div class="list-group-item">
+                    <i class="fa fa-pie-chart" style="color: darkorange;" aria-hidden="true"><span class="ml-2 align-middle">Month Analysis</span></i>
+            </div>
+
+            <div class="list-group-item">
+                <i class="fa fa-plus-square" style="color: darkorange;" aria-hidden="true"><span class="ml-2 align-middle">Add Expensives</span></i>
+            </div>
+        
+            <div class="list-group-item">
+                <i class="fa fa-sign-out" style="color: darkorange;" aria-hidden="true"><span class="ml-2 align-middle">Logout</span></i>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="wp-content" [class.wp-content-expanded]="isSidebarExpanded">
+    <div class="container-fluid">
+        CONTENT GOES HERE
+    </div>
+</div>

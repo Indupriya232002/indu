@@ -1,0 +1,284 @@
+/* Full Page Styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #f4f4f4; /* Light gray background */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background: rgba(0, 0, 0, 0.4); /* Semi-transparent background */
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navbar Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Navbar Items */
+.nav-items {
+    list-style: none;
+    display: flex;
+    margin-right: 100px;
+}
+
+.nav-items li {
+    margin-left: 20px;
+}
+
+.nav-items a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-items a:hover {
+    text-decoration: underline;
+}
+
+/* Login Container */
+.login-container {
+    width: 500px;
+    height: auto;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    height: auto;
+    user-select: none; /* Prevents text selection */
+    pointer-events: auto; /* Ensures normal interaction */
+    touch-action: none;
+    margin: auto;
+    padding: 20px;
+
+}
+
+
+
+
+/* Input Fields */
+input {
+    width: 95%; /* Prevent stretching */
+    padding: 10px;
+    margin: 10px 0;
+    border: 1px solid gray;
+    border-radius: 5px;
+    font-size: 16px;
+    box-sizing: border-box; /* Ensures padding doesn't increase width */
+}
+
+/* Labels */
+label {
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+    margin-left: 0px;
+}
+
+/* Login Button */
+button {
+    width: 95%;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: gray;
+}
+
+/* Signup Link */
+p {
+    margin-top: 15px;
+    font-size: 14px;
+}
+
+p a {
+    color: #007bff;;
+    text-decoration: none;
+}
+
+p a:hover {
+    text-decoration: underline;
+}
+
+.forgot {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    display: block;
+  }
+  
+  .password-wrapper {
+    position: relative;
+    width: 100%; /* Ensures wrapper takes full width */
+  }
+  
+  .password-wrapper input {
+    width: 100%; /* Input takes full width */
+    padding-right: 40px; /* Make space for the eye icon */
+    box-sizing: border-box; /* Ensures padding is included in the width */
+    height: 40px; /* Adjust height for input field */
+  }
+  
+  .toggle-password {
+    position: absolute; /* Set position absolute inside the wrapper */
+    right: 65px;
+    top: 67%;
+    transform: translateY(-50%); /* Fine-tune vertical centering */
+    cursor: pointer; /* Add pointer cursor on hover */
+    font-size: 18px; /* Adjust the size of the icon */
+    color: #333; /* Color of the icon */
+  }
+  
+  .toggle-password i {
+    font-size: 1.1em; /* Size of the eye icon */
+  }
+  
+  .password-wrapper + .text-danger {
+    margin-top: 8px; /* Space between input and validation message */
+  }
+
+  .register-link {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.register-link:hover {
+    text-decoration: underline;
+    color: #007bff;
+}
+
+button {
+    width: 84%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    font-size: 18px;
+    border: none;
+    border-radius: 0;
+    margin-top: 10px;
+    margin-left: 30px;
+    border-radius: 4px;
+}
+
+a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.required {
+    color: red;
+    font-weight: bold;
+  }
+
+  .no-account {
+    text-align: left;
+    margin-top: 20px;
+}
+
+.no-account p{
+  margin-top: -12px;
+}
+
+.text-danger {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    text-align: left;
+  }
+  
+  .email-error, .password-error {
+    margin-left: 29px; /* Error message aligned with the input */
+  }
+
+
+.login-title {
+    text-align: center;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+.form-control {
+    width: 100%;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+
+.forgot {
+    display: block;
+    text-align: left;
+    font-size: 14px;
+    margin-bottom: 15px;
+    text-decoration: none;
+    color: #007bff;
+}
+
+.forgot:hover {
+    text-decoration: underline;
+}
+
+.btn-login {
+    width: 99%;
+    padding: 10px;
+    background: #007bff;
+    border: none;
+    color: white;
+    font-size: 16px;
+    border-radius: 4px;
+    cursor: pointer;
+    margin-left: 0px;
+}
+
+.btn-login:hover {
+    background: #0056b3;
+}
+
+.password-wrapper {
+    position: relative;
+}
+
+.toggle-password {
+    position: absolute;
+    right: 10px;
+    top: 35px;
+    cursor: pointer;
+}

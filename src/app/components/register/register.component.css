@@ -1,0 +1,163 @@
+/* Full Page Styling */
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    background: #f4f4f4;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Navbar */
+.navbar {
+    width: 100%;
+    height: 55px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 50px;
+    background: rgba(0, 0, 0, 0.4);
+    color: white;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+/* Navbar Logo */
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+}
+
+/* Navbar Items */
+.nav-items {
+    list-style: none;
+    display: flex;
+    margin-right: 100px;
+}
+
+.nav-items li {
+    margin-left: 10px;
+}
+
+.nav-items a {
+    color: white;
+    text-decoration: none;
+    font-size: 16px;
+}
+
+.nav-items a:hover {
+    text-decoration: underline;
+}
+
+/* Register Container */
+.register-container {
+    width: 600px;
+    padding: 20px;
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    position: relative;
+    top: 50%;
+    left: 30%;
+    margin-top: 80px;
+}
+
+/* Input Fields */
+
+/* Labels */
+label {
+    font-size: 14px;
+    text-align: left;
+    display: block;
+    margin-top: 10px;
+}
+
+/* Register Button */
+button {
+    width: 95%;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    font-size: 16px;
+    border-radius: 5px;
+}
+
+button:hover {
+    background: gray;
+}
+
+/* Already have an account? Login */
+.already-account {
+    margin-top: 10px;
+}
+
+.already-account p {
+    font-size: 14px;
+}
+
+.login-link {
+    color: #007bff;;
+    text-decoration: none;
+}
+
+.login-link:hover {
+    text-decoration: underline;
+}
+
+.required-star {
+    color: red;
+    font-weight: bold;
+  }
+
+  .form-group {
+    margin-bottom: 20px;
+    position: relative;
+  
+  }
+  
+  .text-danger {
+    color: red;
+    font-size: 14px;
+    margin-top: 5px;
+    display: block;
+    text-align: left;
+    margin-left: 14px;
+  }
+
+  .password-wrapper {
+    position: relative;
+    width: 100%; /* Adjust the width as per your design */
+  }
+  
+  .password-wrapper input {
+    width: 100%; /* Make the input field take full width */
+    padding-right: 40px; /* Adjust padding to make space for the eye icon */
+    box-sizing: border-box; /* Ensures padding is inside the width */
+    height: 40px; 
+  }
+  
+  .toggle-password {
+    position: absolute;
+    right: 87px;
+    top: 68%;
+    transform: translateY(-50%); /* Vertically center the icon */
+    cursor: pointer;
+    font-size: 18px; /* Adjust the size of the icon */
+    color: #333; /* You can change this color based on your theme */
+    pointer-events: auto; /* Ensures clickability */
+  }
+  
+  .toggle-password i {
+    font-size: 1.1em; /* Size of the eye icon */
+  }
+  
+  .password-wrapper + .text-danger {
+    margin-top: 8px; /* Space between the input and validation message */
+  }
