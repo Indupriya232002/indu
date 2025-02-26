@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { NgbModal } from '@ng-bootstrap/ng-bootstrap';
+import { ExpensesService } from 'src/app/services/expenses.service';
 
 @Component({
   selector: 'app-side-bar',
@@ -6,8 +9,19 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./side-bar.component.scss']
 })
 export class SideBarComponent implements OnInit {
+  @ViewChild('content') content: any;
+  expenseForm!: FormGroup;
+  submitted = false;
 
-  constructor() { }
+  expenseData = {
+    expenditure: '',
+    name: '',
+    date: '',
+    category: ''
+  };
+
+  constructor(private fb: FormBuilder, private modalService: NgbModal,private expenseService: ExpensesService) {
+   }
   isSidebarExpanded = false;
   switchScreen: number = 1;
   chartOptions: echarts.EChartsOption;
@@ -76,12 +90,23 @@ export class SideBarComponent implements OnInit {
 
   }
 
-  addExpensive(content){
-
+  addExpensive(content) {
+    this.modalService.open(this.content, { centered: true, size: 'md' });
   }
 
   onClickLogout(){
     
   }
 
+  onSubmit() {
+    this.expenseService.addExpense(this.expenseData).subscribe({
+      next: () => {
+        console.log('Expense Saved');
+        this.modalService.dismissAll();
+      },
+      error: (error) => console.error('Error:', error)
+    });
+  }
 }
+
+

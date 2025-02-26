@@ -186,3 +186,94 @@ button, a {
   height: 400px;
 }
 
+/* Modal Container - Full Width */
+.modal-container {
+  background: #1e1e1e;
+  color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 100%; /* Ensures full width */
+  max-width: 450px; /* Adjust width as needed */
+  box-sizing: border-box;
+}
+
+/* Ensuring modal dialog does not restrict width */
+.modal-dialog {
+  max-width: 100%;
+  display: flex;
+  justify-content: center;
+}
+
+/* Modal Header */
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-bottom: 1px solid gray;
+  padding-bottom: 10px;
+}
+
+/* Close Button */
+.close {
+  background: none;
+  border: none;
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+}
+
+/* Modal Body */
+.modal-body {
+  background: #1e1e1e;
+  padding: 20px;
+  width: 100%; /* Ensures full width */
+}
+
+/* Input Fields */
+input, select {
+  width: 100%;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 5px;
+  border: none;
+  background: #333;
+  color: white;
+  font-size: 16px;
+  box-sizing: border-box;
+}
+
+/* Input Group */
+.input-group {
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid white;
+  padding: 5px;
+  width: 100%; /* Ensures full width */
+  box-sizing: border-box;
+}
+
+.input-group label {
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+/* Save Button */
+button {
+  width: 100%;
+  padding: 12px;
+  margin-top: 15px;
+  border: 1px solid orange;
+  background: transparent;
+  color: orange;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 5px;
+}
+
+/* Fix for Extra White Space */
+.modal-content {
+  width: 100%;
+  max-width: 100%;
+  background: #1e1e1e !important;
+  border-radius: 8px;
+}
