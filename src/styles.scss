@@ -6,3 +6,41 @@ body {
 }
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+/* Apply dark theme globally */
+body {
+    background-color: #121212;
+    color: #ffffff;
+  }
+  
+  /* Style for all cards and containers */
+  .card, .container {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #333;
+    padding: 10px;
+    border-radius: 5px;
+  }
+  
+  /* Style for all buttons */
+  button {
+    background-color: #333;
+    color: #fff;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  input, textarea {
+    background-color: #1e1e1e;
+    color: #ffffff;
+    border: 1px solid #444;
+    padding: 5px;
+  }
+  
+  /* Style for navbar */
+  .navbar {
+    background-color: #222;
+    padding: 10px;
+    color: white;
+  }

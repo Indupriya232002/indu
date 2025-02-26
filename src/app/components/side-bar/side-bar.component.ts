@@ -26,7 +26,10 @@ export class SideBarComponent implements OnInit {
       },
       legend: {
         top: '3%',
-        left: 'center'
+        left: 'center',
+        textStyle: {
+          color: '#fff', // Tooltip text color
+        }
       },
       series: [
         {

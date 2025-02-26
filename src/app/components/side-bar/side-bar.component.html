@@ -18,19 +18,19 @@
                 <i class="fa fa-home" style="color: darkorange;" aria-hidden="true"> <span class="ml-2 align-middle">Home</span></i>
             </div>
 
-            <div class="list-group-item">
+            <div class="list-group-item" (click)="onClickDaily()">
                 <i class="fa fa-inr" aria-hidden="true" style="color: darkorange;"><span
                             class="ml-2 align-middle">Daily Analysis</span></i>
             </div>
-            <div class="list-group-item">
+            <div class="list-group-item" (click)="onClickMonth()">
                     <i class="fa fa-pie-chart" style="color: darkorange;" aria-hidden="true"><span class="ml-2 align-middle">Month Analysis</span></i>
             </div>
 
-            <div class="list-group-item">
+            <div class="list-group-item" (click)="addExpensive()">
                 <i class="fa fa-plus-square" style="color: darkorange;" aria-hidden="true"><span class="ml-2 align-middle">Add Expensives</span></i>
             </div>
         
-            <div class="list-group-item">
+            <div class="list-group-item" (click)="onClickLogout(content)">
                 <i class="fa fa-sign-out" style="color: darkorange;" aria-hidden="true"><span class="ml-2 align-middle">Logout</span></i>
             </div>
         </div>
@@ -38,13 +38,13 @@
 </div>
 
 <div class="wp-content" [class.wp-content-expanded]="isSidebarExpanded">
-    <div class="container-fluid">
-        <div class="row">
-            <div class="card">
-                <h1>Expensive Analysis</h1>
+    <div class="container-fluid" style="display: flex;flex-direction: column;gap: 1em;">
+        <div class="row" style="padding: 1em;">
+            <div class="card" style="width: 100%;text-align: center;">
+                <h1 style="padding-top: 10px;font-weight: 600;">Expensive Analysis</h1>
             </div>
         </div>
-        <div class="row" *ngIf="switchScreen == 1">
+        <div class="row" *ngIf="switchScreen == 1" >
             <div class="col-md-6">
                 <div class="card" style="display: flex;align-items: center;">
                     <div echarts [options]="chartOptions" class="chart-container"></div>
@@ -53,9 +53,20 @@
             <div class="col-md-6">
                 <div class="card">
                     <h1>1234</h1>
-                    <!-- <div echarts [options]="chartOptions" class="chart-container"></div> -->
                 </div>
             </div>
         </div>
     </div>
 </div>
+
+<ng-template #content let-modal>
+    <div class="modal-header">
+        <h1>Add Expensives</h1>
+        <button type="button" class="close" aria-label="Close" (click)="modal.dismiss('Cross click')">
+            <span aria-hidden="true">&times;</span>
+        </button>
+    </div>
+    <div class="modal-body">
+
+    </div>
+</ng-template>
