@@ -66,6 +66,22 @@ export class SideBarComponent implements OnInit {
         }
       ]
     };
+  }
+
+  onClickDaily(){
+
+  }
+
+  onClickMonth(){
+
+  }
+
+  addExpensive(content){
+
+  }
+
+  onClickLogout(){
     
   }
+
 }
