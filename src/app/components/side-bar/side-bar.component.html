@@ -9,12 +9,12 @@
                     </div>
                     <div class="row">
                         <div class="header-tag pl-3 py-2">
-                            <span class="ml-2" style="font-size: 1.2em;font-weight: 800;">Expense Tracker</span>
+                            <span class="ml-2" style="font-size: 1.2em;font-weight: 800;color: white;">Expense Tracker</span>
                         </div>
                     </div>
                 </div>
             </div>
-            <div class="list-group-item">
+            <div class="list-group-item" (click)="onClickHome()">
                 <i class="fa fa-home" style="color: darkorange;" aria-hidden="true"> <span class="ml-2 align-middle">Home</span></i>
             </div>
 
@@ -39,6 +39,23 @@
 
 <div class="wp-content" [class.wp-content-expanded]="isSidebarExpanded">
     <div class="container-fluid">
-        CONTENT GOES HERE
+        <div class="row">
+            <div class="card">
+                <h1>Expensive Analysis</h1>
+            </div>
+        </div>
+        <div class="row" *ngIf="switchScreen == 1">
+            <div class="col-md-6">
+                <div class="card" style="display: flex;align-items: center;">
+                    <div echarts [options]="chartOptions" class="chart-container"></div>
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="card">
+                    <h1>1234</h1>
+                    <!-- <div echarts [options]="chartOptions" class="chart-container"></div> -->
+                </div>
+            </div>
+        </div>
     </div>
 </div>

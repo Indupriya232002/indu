@@ -14,6 +14,8 @@ import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
 import {HttpClientModule} from '@angular/common/http';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { NgxEchartsModule } from 'ngx-echarts';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 
 @NgModule({
@@ -32,8 +34,10 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
+    NgxEchartsModule.forRoot({ echarts: () => import('echarts') }),
     ReactiveFormsModule,HttpClientModule,
-    RouterModule.forRoot([]) 
+    RouterModule.forRoot([]),
+    BrowserAnimationsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

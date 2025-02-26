@@ -24,7 +24,8 @@
               "src/assets"
             ],
             "styles": [
-              "src/styles.css"
+              "src/custom-theme.scss",
+              "src/styles.scss"
             ],
             "scripts": []
           },
@@ -124,5 +125,10 @@
   "defaultProject": "expensetracker",
   "cli": {
     "analytics": "d056a680-ccaf-4d02-aef8-218133d9ab65"
+  },
+  "schematics": {
+    "@schematics/angular:component": {
+      "style": "scss"
+    }
   }
 }
