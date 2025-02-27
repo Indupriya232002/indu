@@ -8,6 +8,7 @@ import { ForgotpasswordComponent } from './components/forgotpassword/forgotpassw
 import { OtpverificationComponent } from './components/otpverification/otpverification.component';
 import { ResetpasswordComponent } from './components/resetpassword/resetpassword.component';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
+import { AuthGuard } from './auth.guard'
 
 const routes: Routes = [
   { path: '', redirectTo: 'welcome', pathMatch: 'full' }, // Redirect to Welcome page
@@ -18,7 +19,7 @@ const routes: Routes = [
   {path:'forgotpassword',component:ForgotpasswordComponent},
   {path:'otpverification',component:OtpverificationComponent},
   {path:'resetpassword',component:ResetpasswordComponent},
-  {path:'sideBar',component:SideBarComponent}
+  {path:'sideBar',component:SideBarComponent,canActivate: [AuthGuard] }
 ];
 
 @NgModule({
