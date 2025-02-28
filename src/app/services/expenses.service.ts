@@ -67,12 +67,12 @@ export class ExpensesService {
   }
 
   getExpensesByDateRange(startDate: string, endDate: string): Observable<any> {
-    return this.http.get(`${this.baseUrl}/GetExpensesByDateRange?startDate=${startDate}&endDate=${endDate}`);
+    return this.http.get(`${this.baseUrl}GetExpensesByDateRange?startDate=${startDate}&endDate=${endDate}`);
   }
 
   // Get daily expenses
   getDailyExpenses(): Observable<any> {
-    return this.http.get(`${this.baseUrl}/GetDailyExpenses`);
+    return this.http.get(`${this.baseUrl}GetDailyExpenses`);
   }
   
 }

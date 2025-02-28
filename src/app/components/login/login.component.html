@@ -3,13 +3,14 @@
     <ul class="nav-items">
         <!-- <li><a routerLink="/login">Login</a></li>
         <li><a routerLink="/register">Register</a></li> -->
+        <li><a href="#">About Us</a></li>
         <li><a routerLink="/welcome">Home</a></li>
     </ul>
 </div>
 
 
 <div class="login-container">
-    <h2 class="login-title">Log In</h2>
+    <h1 class="login-title">Log In</h1>
 
     <div class="form-group">
         <label for="email">Email Address <span class="required">*</span></label>
@@ -23,7 +24,7 @@
         <input [type]="isPasswordVisible ? 'text' : 'password'" [(ngModel)]="user.password" name="password"
             class="form-control" placeholder="Enter your password" required />
         <span class="toggle-password" (click)="togglePasswordVisibility()">
-            <i class="fa" [ngClass]="{'fa-eye-slash': isPasswordVisible, 'fa-eye': !isPasswordVisible}"></i>
+            <i class="fa" [ngClass]="{'fa-eye-slash': isPasswordVisible, 'fa-eye': !isPasswordVisible}" style="margin-top: 26px;"></i>
         </span>
         <div *ngIf="validatePasswordmsg && !user.password" class="text-danger">{{ passwordErrorMessage }}</div>
     </div>
@@ -38,3 +39,4 @@
 
     <button (click)="loginUser()" class="btn-login">Log In</button>
 </div>
+

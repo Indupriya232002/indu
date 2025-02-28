@@ -16,6 +16,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { NgxEchartsModule } from 'ngx-echarts';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { LoaderComponent } from './loader/loader.component';
 
 
 @NgModule({
@@ -28,7 +29,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     ResetpasswordComponent,
     OtpverificationComponent,
     ExpensesComponent,
-    SideBarComponent
+    SideBarComponent,
+    LoaderComponent
   ],
   imports: [
     BrowserModule,

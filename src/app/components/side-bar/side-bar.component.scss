@@ -96,6 +96,7 @@ button, a {
 
 .list-group-item {
   font-size: 14px;
+  padding: 2em;
 }
 
 
@@ -182,29 +183,156 @@ button, a {
 }
 
 .chart-container {
-  width: 600px;
+  width: 100%;
   height: 400px;
 }
 
-/* Modal Container - Full Width */
+.date-filter-row {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.date-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.get-expenses-btn {
+  display: flex;
+  align-items: center;
+}
+
+.get-expenses-btn button {
+  height: 38px;
+  margin-top: 23px;
+}
+
+
+.deleteIcon {
+  position: absolute;
+  top: -0.6em;
+  right: -0.6em;
+  color: rgb(255, 255, 255);
+  border-radius: 100px;
+  width: 1.3em;
+  height: 1.3em;
+  display: flex;
+  place-content: center;
+  align-items: center;
+  font-size: 1.2em;
+  cursor: pointer;
+  background: red;
+}
+
+.move-up-on-hover {
+  transition: transform 0.3s ease;
+}
+
+.move-up-on-hover:hover {
+  transform: translateY(-5px);
+}
+
+
+
+.user-list li {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+}
+.user-list .user-icon.primary {
+  border: 3px solid #7366FF;
+}
+
+.user-list .user-icon {
+  border-radius: 100%;
+  display: inline-block;
+}
+
+.user-list .user-icon .user-box {
+  margin: 3px;
+  width: 47px;
+  height: 47px;
+  border-radius: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-list .user-icon.primary .user-box {
+  background: #e8e6ff;
+}
+
+
+@keyframes zoom-shake {
+  0% {
+    transform: scaleX(1);
+  }
+
+  10% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+  }
+
+  20% {
+    transform: scale3d(0.9, 0.9, 0.9) rotate(-3deg);
+  }
+
+  30% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+  }
+
+  50% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+  }
+
+  70% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+  }
+
+  90% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(3deg);
+  }
+
+  40% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+  }
+
+  60% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+  }
+
+  80% {
+    transform: scale3d(1.1, 1.1, 1.1) rotate(-3deg);
+  }
+
+  100% {
+    transform: scaleX(1);
+  }
+}
+
+.move-up-on-hover:hover .return-image {
+  animation: zoom-shake 1.5s ease infinite;
+}
+
 .modal-container {
   background: #1e1e1e;
   color: white;
   padding: 20px;
   border-radius: 8px;
-  width: 100%; /* Ensures full width */
-  max-width: 450px; /* Adjust width as needed */
+  width: 100%; 
+  max-width: 450px;
   box-sizing: border-box;
 }
 
-/* Ensuring modal dialog does not restrict width */
 .modal-dialog {
   max-width: 100%;
   display: flex;
   justify-content: center;
 }
 
-/* Modal Header */
 .modal-header {
   display: flex;
   justify-content: space-between;
@@ -213,7 +341,6 @@ button, a {
   padding-bottom: 10px;
 }
 
-/* Close Button */
 .close {
   background: none;
   border: none;
@@ -222,14 +349,12 @@ button, a {
   cursor: pointer;
 }
 
-/* Modal Body */
 .modal-body {
   background: #1e1e1e;
   padding: 20px;
-  width: 100%; /* Ensures full width */
+  width: 100%; 
 }
 
-/* Input Fields */
 input, select {
   width: 100%;
   padding: 10px;
@@ -242,13 +367,12 @@ input, select {
   box-sizing: border-box;
 }
 
-/* Input Group */
 .input-group {
   display: flex;
   align-items: center;
   border-bottom: 1px solid white;
   padding: 5px;
-  width: 100%; /* Ensures full width */
+  width: 100%;
   box-sizing: border-box;
 }
 
@@ -257,23 +381,28 @@ input, select {
   margin-right: 5px;
 }
 
-/* Save Button */
 button {
-  width: 100%;
+  width: 90%;
   padding: 12px;
-  margin-top: 15px;
+  margin-top: 11px;
   border: 1px solid orange;
   background: transparent;
   color: orange;
   font-size: 16px;
   cursor: pointer;
   border-radius: 5px;
+  margin-left: 23px;
 }
 
-/* Fix for Extra White Space */
 .modal-content {
   width: 100%;
   max-width: 100%;
   background: #1e1e1e !important;
   border-radius: 8px;
+}
+
+.error-message {
+  color: red;
+  font-size: 12px;
+  margin-top: 5px;
 }
